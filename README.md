@@ -29,7 +29,7 @@
 
 
 
-HistoryCard2505.png, HistoryCard2510.png, HistoryCard2605.png: 연혁 카드
+HistoryCard_2505.png, HistoryCard_2509.png, HistoryCard_2605.png: 연혁 카드
 
 mockup_server.png: 3번 배경용 서버 목업
 
