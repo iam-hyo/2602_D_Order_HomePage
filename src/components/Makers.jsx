@@ -15,7 +15,7 @@ const Makers = () => {
     },
     {
       role: "Back-End",
-      members: ["임수빈", "박선우", "차은호", "이동건"],
+      members: ["임수빈", "박선우", "차은호"],
       color: "text-amber-400"
     }
   ];
