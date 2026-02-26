@@ -148,7 +148,7 @@ const StatusPage = () => {
           </span>
 
           <h1 className="text-4xl md:text-7xl font-semibold mb-10 leading-tight">
-            2025 봄 대동제
+            2026 봄 대동제
             <br />
             실시간 현황판
           </h1>
