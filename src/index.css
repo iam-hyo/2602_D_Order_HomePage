@@ -8,3 +8,39 @@ body { margin: 0; -webkit-font-smoothing: antialiased; }
 .snap-start { scroll-snap-align: start; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@keyframes flipTop {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes flipBottom {
+  0% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+/* 윗판: 접혀 떨어짐 */
+.flip-top {
+  transform-origin: bottom;
+  animation: flipTop 560ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* 아랫판: 펼쳐져 붙음 */
+.flip-bottom {
+  transform-origin: top;
+  animation: flipBottom 560ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}

@@ -32,13 +32,13 @@ const Hero = () => {
    * [Responsibility]
    * - 일정 시간마다 index를 증가시켜 슬라이드를 자동 로테이션
    */
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % slides.length);
-    }, 5000);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setIndex((prev) => (prev + 1) % slides.length);
+  //   }, 5000);
 
-    return () => clearInterval(timer);
-  }, [slides.length]);
+  //   return () => clearInterval(timer);
+  // }, [slides.length]);
 
   // 통일감 있는 전환을 위해 "전체 장면"이 공유할 duration/ease를 한 곳에서 정의
   const TRANSITION = { duration: 0.6, ease: [0.22, 1, 0.36, 1] }; // easeOut 계열
@@ -157,7 +157,7 @@ const Hero = () => {
                   className="
             absolute bottom-0
             left-[0%] sm:left-[14%] md:left-[18%] lg:left-[0%]
-            h-[220px] sm:h-[220px] md:w-[180px] lg:w-[200px]
+            h-[220px] sm:h-[220px] md:h-[360px] lg:h-[420px]
             drop-shadow-2xl z-30
           "
                 />
