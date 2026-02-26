@@ -24,7 +24,7 @@ const Makers = () => {
     <section id="makers" className="min-h-screen snap-start bg-white p-10 md:p-20 pt-32 overflow-y-auto">
       <div className="max-w-[1000px] mx-auto">
         <div className="flex flex-col gap-2 mb-12">
-          <h2 className="text-4xl font-black">만든 사람들</h2>
+          <h2 className="text-4xl font-black mt-20">만든 사람들</h2>
           <span className="text-lg text-gray-600">디오더를 만든 사람들을 소개합니다</span>
         </div>
 
@@ -57,10 +57,6 @@ const Makers = () => {
             </div>
           ))}
         </div>
-
-        <footer className="mt-32 pt-10 border-t border-gray-100 text-center text-gray-300 text-sm">
-          © 2026 D-Order Team. All rights reserved.
-        </footer>
       </div>
     </section>
   );

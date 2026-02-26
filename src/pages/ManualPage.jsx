@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Footer from '../components/Footer';
 
 const Manual = () => {
   const cards = [
@@ -66,7 +67,8 @@ const Manual = () => {
   ];
 
   return (
-    <section id="manual" className="min-h-screen snap-start bg-white py-32 px-10 overflow-y-auto">
+    <div>
+    <section id="manual" className="min-h-screen snap-start bg-white pb-32 pt-20 px-10 overflow-y-auto pt-[80px]">
       <div className="max-w-[1000px] mx-auto">
         <h2 className="text-4xl font-black mb-16">한 눈에 알아보는 기능</h2>
 
@@ -125,6 +127,8 @@ const Manual = () => {
         </div>
       </div>
     </section>
+    <Footer />
+    </div>
   );
 };
 

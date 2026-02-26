@@ -45,16 +45,16 @@ const IntroAbout = () => {
           className="mt-6 text-white/90 text-lg md:text-2xl font-semibold leading-relaxed drop-shadow"
         >
           대학 축제 부스 운영을{" "}
-          <span className="inline-block px-3 py-1 rounded-lg bg-green-500/20 ring-1 ring-green-400/30 backdrop-blur-sm">
+          <span className="inline-block px-2 rounded-lg bg-green-500/20 ring-1 ring-green-400/30 backdrop-blur-sm">
             더 빠르고
           </span>{" "}
-          <span className="inline-block px-3 py-1 rounded-lg bg-green-500/20 ring-1 ring-green-400/30 backdrop-blur-sm">
+          <span className="inline-block px-2 rounded-lg bg-green-500/20 ring-1 ring-green-400/30 backdrop-blur-sm">
             더 정확하게
           </span>{" "}
           바꿔주는 주문·운영 도구예요.
           <br />
           주문 누락, 대기 혼선, 정산 실수를 줄이고{" "}
-          <span className="inline-block px-3 py-1 rounded-lg bg-white/15 ring-1 ring-white/20 backdrop-blur-sm">
+          <span className="inline-block px-2 rounded-lg bg-white/15 ring-1 ring-white/20 backdrop-blur-sm">
             현장은 운영에만 집중
           </span>
           할 수 있게 도와줍니다.
