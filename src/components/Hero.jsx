@@ -13,7 +13,7 @@ const Hero = () => {
    * [Responsibility]
    * - 현재 슬라이드 인덱스 관리(0..N-1)
    */
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(2);
 
   /**
    * [Responsibility]
@@ -157,7 +157,7 @@ const Hero = () => {
                   className="
             absolute bottom-0
             left-[0%] sm:left-[14%] md:left-[18%] lg:left-[0%]
-            w-[120px] sm:w-[140px] md:w-[180px] lg:w-[200px]
+            h-[220px] sm:h-[220px] md:w-[180px] lg:w-[200px]
             drop-shadow-2xl z-30
           "
                 />

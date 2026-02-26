@@ -8,7 +8,7 @@ const Footer = () => {
                 <div>
                     <h3 className="font-black text-xl mb-4 text-orange-500">D-Order</h3>
                     <p className="text-sm text-gray-500 leading-relaxed max-w-xs">
-                        대학 축제의 새로운 기준.<br/>
+                        대학 축제의 새로운 기준.<br />
                         비영리 테이블 오더 플랫폼 디오더입니다.
                     </p>
                     <div className="text-xs text-gray-400 mt-6 space-y-1">
@@ -16,7 +16,7 @@ const Footer = () => {
                         <p>Contact: hyojunj@naver.com</p>
                     </div>
                 </div>
-                
+
                 <div className="flex flex-wrap gap-10 md:gap-20 text-sm">
                     <div className="flex flex-col gap-3">
                         <span className="font-bold text-black mb-2">Service</span>
@@ -26,8 +26,12 @@ const Footer = () => {
                     </div>
                     <div className="flex flex-col gap-3">
                         <span className="font-bold text-black mb-2">Legal</span>
-                        <span className="text-gray-500 cursor-not-allowed" title="준비 중입니다">서비스 이용약관</span>
-                        <span className="text-gray-500 cursor-not-allowed" title="준비 중입니다">개인정보 처리방침</span>
+                        <Link to="/terms" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black transition-colors">
+                            서비스 이용약관
+                        </Link>
+                        <Link to="/privacy" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black transition-colors">
+                            개인정보 처리방침
+                        </Link>
                     </div>
                     <div className="flex flex-col gap-3">
                         <span className="font-bold text-black mb-2">Social</span>

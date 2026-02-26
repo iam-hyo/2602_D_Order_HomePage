@@ -54,7 +54,7 @@ const Manual = () => {
       imgClass: "w-[50%] right-7 bottom-7",
       hoverY: -5
     },
-     {
+    {
       id: 6,
       title: "쿠폰/이벤트 등록",
       sub: "할인 코드 발급도 간편하게",
@@ -68,22 +68,22 @@ const Manual = () => {
 
   return (
     <div>
-    <section id="manual" className="min-h-screen snap-start bg-white pb-32 pt-20 px-10 overflow-y-auto pt-[80px]">
-      <div className="max-w-[1000px] mx-auto">
-        <h2 className="text-4xl font-black mb-16">한 눈에 알아보는 기능</h2>
+      <section id="manual" className="min-h-screen snap-start bg-white pb-32 pt-20 px-10 overflow-y-auto pt-[80px]">
+        <div className="max-w-[1000px] mx-auto">
+          <h2 className="text-4xl font-black mt-6 mb-14">한 눈에 알아보는 D-Order</h2>
 
-        <div className="grid grid-cols-2 gap-8">
-          {cards.map((card) => (
-            <motion.div
-              key={card.id}
-              onClick={() => window.open(`/details/manual_${card.id}`, '_blank')}
-              className={`
+          <div className="grid grid-cols-2 gap-8">
+            {cards.map((card) => (
+              <motion.div
+                key={card.id}
+                onClick={() => window.open(`/details/manual_${card.id}`, '_blank')}
+                className={`
       ${card.size} 
       ${card.bgColor}           /* 카드별 배경색 적용 */
       ${card.hoverBorder}       /* 카드별 호버 테두리 적용 */
       min-h-[350px] 
       rounded-[3rem] 
-      p-12 
+      p-6 
       relative 
       overflow-hidden 
       group 
@@ -93,41 +93,42 @@ const Manual = () => {
       hover:shadow-2xl 
       hover:shadow-gray-200/50 
       transition-all duration-300
+      sm:p-12
     `}
-            >
-              <div className="relative z-10">
-                {/* 텍스트 가독성을 위해 어두운 그레이(slate-800) 추천 */}
-                <h3 className="text-2xl font-bold mb-2 text-slate-800">{card.title}</h3>
-                <p className="text-slate-500 font-medium">{card.sub}</p>
-              </div>
+              >
+                <div className="relative z-10">
+                  {/* 텍스트 가독성을 위해 어두운 그레이(slate-800) 추천 */}
+                  <h3 className="text-2xl font-bold mb-2 text-slate-800">{card.title}</h3>
+                  <p className="text-slate-500 font-medium">{card.sub}</p>
+                </div>
 
-              <motion.img
-                src={`/assets/manual/card_${card.id}.png`}
-                // card 객체에 정의한 imgClass를 그대로 주입
-                className={`absolute object-contain transition-transform duration-500 ease-out ${card.imgClass}`}
-                whileHover={{
-                  scale: 1.05,
-                  rotate: -2,
-                  y: card.hoverY // 카드마다 다른 호버 높이 적용
-                }}
-                transition={{
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 20
-                }}
-              />
-            </motion.div>
-          ))}
-        </div>
+                <motion.img
+                  src={`/assets/manual/card_${card.id}.png`}
+                  // card 객체에 정의한 imgClass를 그대로 주입
+                  className={`absolute object-contain transition-transform duration-500 ease-out ${card.imgClass}`}
+                  whileHover={{
+                    scale: 1.05,
+                    rotate: -2,
+                    y: card.hoverY // 카드마다 다른 호버 높이 적용
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20
+                  }}
+                />
+              </motion.div>
+            ))}
+          </div>
 
-        <div className="mt-20 text-center">
-          <a href="/assets/manual/25년 가을 D-order 사용설명서.pdf" download className="bg-gray-100 px-8 py-4 rounded-2xl font-bold hover:bg-gray-200 transition">
-            📄 사용설명서 PDF 다운로드
-          </a>
+          <div className="mt-20 text-center">
+            <a href="/assets/manual/25년 가을 D-order 사용설명서.pdf" download className="bg-gray-100 px-8 py-4 rounded-2xl font-bold hover:bg-gray-200 transition">
+              📄 사용설명서 PDF 다운로드
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
-    <Footer />
+      </section>
+      <Footer />
     </div>
   );
 };

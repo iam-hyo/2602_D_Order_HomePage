@@ -21,14 +21,14 @@ const Makers = () => {
   ];
 
   return (
-    <section id="makers" className="min-h-screen snap-start bg-white p-10 md:p-20 pt-32 overflow-y-auto">
-      <div className="max-w-[1000px] mx-auto">
-        <div className="flex flex-col gap-2 mb-12">
+    <section id="makers" className="min-h-screen snap-start bg-white px-10 overflow-y-auto md:px-20">
+      <div className="max-w-[960px] mx-auto">
+        <div className="flex flex-col gap-2 mb-16">
           <h2 className="text-4xl font-black mt-20">만든 사람들</h2>
           <span className="text-lg text-gray-600">디오더를 만든 사람들을 소개합니다</span>
         </div>
 
-        <div className="space-y-20">
+        <div className="space-y-20 pb-20">
           {teams.map((team, i) => (
             <div key={i}>
               <h3 className={`${team.color} font-black text-sm tracking-widest uppercase mb-10`}>

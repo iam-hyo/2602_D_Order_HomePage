@@ -29,7 +29,7 @@ const TermsPage = () => {
           <p>D-Order 팀은 시스템 오류, 천재지변, 또는 주점 측의 사정으로 인한 주문 누락 및 조리 지연에 대해 법적 책임을 지지 않습니다. 다만, 원활한 서비스 제공을 위해 최선을 다해 기술적 지원을 제공합니다.</p>
         </section>
       </div>
-      <p className="mt-10 text-xs text-gray-400">시행일자: 2026년 5월 1일</p>
+      <p className="mt-10 text-xs text-gray-400">시행일자: 2026년 2월 27일</p>
     </div>
   );
 };

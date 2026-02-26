@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BookOpen, MousePointer2, CreditCard, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { BookOpen, MousePointer2, CreditCard, ChevronRight, X, MessageCircle } from 'lucide-react';
 
 const HowtoStart = () => {
     const navigate = useNavigate();
@@ -36,8 +36,8 @@ const HowtoStart = () => {
 
     return (
         <section className="min-h-screen bg-black py-10 px-6 flex flex-col items-center justify-center font-pretendard">
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-12 text-center pt-[128px]">어디서 부터 시작해야 할지 <br /> 
-            모르겠다면?</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-12 text-center pt-[128px]">어디서 부터 시작해야 할지 <br />
+                모르겠다면?</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl">
                 {cards.map((card) => (
                     <motion.div
@@ -67,31 +67,54 @@ const HowtoStart = () => {
             <AnimatePresence>
                 {isModalOpen && (
                     <div className="fixed inset-0 z-[200] flex items-center justify-center px-4">
-                        <motion.div 
+                        {/* 배경 어둡게 (클릭 시 닫힘) */}
+                        <motion.div
                             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                             className="absolute inset-0 bg-black/60 backdrop-blur-sm"
                             onClick={() => setIsModalOpen(false)}
                         />
-                        <motion.div 
+
+                        {/* 모달 콘텐츠 */}
+                        <motion.div
                             initial={{ scale: 0.9, opacity: 0, y: 20 }}
                             animate={{ scale: 1, opacity: 1, y: 0 }}
                             exit={{ scale: 0.9, opacity: 0, y: 20 }}
                             className="bg-white w-full max-w-md rounded-[2.5rem] p-8 md:p-10 relative z-10 shadow-2xl text-center"
                         >
-                            <h3 className="text-2xl font-black mb-2">비영리 구간 요금제</h3>
-                            <p className="text-gray-400 text-sm mb-8">서버 유지비용만 청구됩니다.</p>
-                            
+                            {/* 닫기(X) 버튼 */}
+                            <button
+                                onClick={() => setIsModalOpen(false)}
+                                className="absolute top-6 right-6 p-2 text-gray-400 hover:text-black hover:bg-gray-100 rounded-full transition-colors"
+                            >
+                                <X size={24} />
+                            </button>
+
+                            <h3 className="text-2xl font-black mb-2">디오더 구간별 요금제</h3>
+                            <p className="text-gray-400 text-sm mb-8">서버 유지비용 목적으로 사용됩니다.</p>
+
+                            {/* 요금제 리스트 (isPopular 제거) */}
                             <div className="space-y-4 text-left">
                                 <PriceRow title="Lite" count="30개 이하" price="4,000원" color="bg-gray-100" />
-                                <PriceRow title="Standard" count="60개 이하" price="7,000원" color="bg-blue-50 text-blue-600" isPopular />
+                                <PriceRow title="Standard" count="60개 이하" price="7,000원" color="bg-blue-50 text-blue-600" />
                                 <PriceRow title="Pro" count="100개 이하" price="9,000원" color="bg-orange-50 text-orange-600" />
                             </div>
 
-                            <button 
-                                onClick={() => setIsModalOpen(false)}
-                                className="mt-8 w-full bg-black text-white py-4 rounded-2xl font-bold hover:scale-[1.02] transition-transform"
+                            {/* 안내 문구 추가 */}
+                            <div className="mt-8 p-4 bg-gray-50 rounded-2xl border border-gray-100">
+                                <p className="text-sm text-gray-600 font-medium leading-relaxed">
+                                    서비스 이용 신청 및 추가 문의는<br />
+                                    <span className="text-black font-bold">카카오톡 채널 내 구글 설문</span>을 통해<br />
+                                    진행하실 수 있습니다.
+                                </p>
+                            </div>
+
+                            {/* 카카오톡 이용 문의하기 버튼 */}
+                            <button
+                                onClick={() => window.open('http://pf.kakao.com/_xeKARX', '_blank')}
+                                className="mt-4 w-full bg-[#FAE100] text-black py-4 rounded-2xl font-bold hover:scale-[1.02] transition-transform flex items-center justify-center gap-2 shadow-sm"
                             >
-                                확인했습니다
+                                <MessageCircle size={20} className="fill-black" />
+                                카카오톡 이용 문의하기
                             </button>
                         </motion.div>
                     </div>

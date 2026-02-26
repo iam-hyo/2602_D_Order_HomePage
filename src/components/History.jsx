@@ -47,7 +47,7 @@ const History = () => {
   return (
     <section
       id="history"
-      className="h-screen snap-start relative bg-cover bg-center flex items-center justify-center px-5 md:px-10"
+      className="min-h-screen snap-start relative bg-cover bg-center flex items-center justify-center px-5 py-28 md:px-10"
       style={{ backgroundImage: "url('/assets/Festival.png')" }}
     >
       {/* dim */}
@@ -98,8 +98,9 @@ const History = () => {
                     transition={{ duration: 0.25 }}
                     className={[
                       "block cursor-pointer",
+                      "max-w-[240px] mx-auto",
                       "bg-white/10 border border-white/20 backdrop-blur-md",
-                      "rounded-3xl p-4",
+                      "rounded-3xl p-3",
                       isActive(it.id) ? "ring-1 ring-orange-400/40" : "",
                     ].join(" ")}
                     // ✅ 클릭 시 강조도 같이 하되, 링크는 기본 동작으로 두기
