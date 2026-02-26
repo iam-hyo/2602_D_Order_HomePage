@@ -24,13 +24,16 @@ const Header = () => {
 
   // 동적 스타일 클래스 (메뉴가 열렸을 때는 배경을 꽉 채워 글씨 가독성을 높임)
   const headerStyle = `
-    fixed top-0 w-full z-50 transition-all duration-300
-    ${isScrolled || isMobileMenuOpen 
-      ? (isDarkTheme ? 'bg-black/30 backdrop-blur-xl border-b border-white/10' : 'bg-white/20 backdrop-blur-md border-b border-black/5') 
-      : 'bg-transparent'
+  fixed top-0 w-full z-50 transition-all duration-300
+  ${isDarkTheme
+      ? 'bg-black/20 backdrop-blur-sm border-b border-white/10'
+      : (isScrolled || isMobileMenuOpen
+        ? 'bg-white/20 backdrop-blur-md border-b border-black/5'
+        : 'bg-transparent'
+      )
     }
-    ${isDarkTheme ? 'text-white' : 'text-black'}
-  `;
+  ${isDarkTheme ? 'text-white' : 'text-black'}
+`;
 
   const logoSrc = isDarkTheme ? "/assets/logo_white.png" : "/assets/logo_black.png";
 
@@ -58,15 +61,14 @@ const Header = () => {
           {/* 데스크톱용 문의 버튼 */}
           <button
             onClick={() => window.open('http://pf.kakao.com/_xeKARX', '_blank')}
-            className={`hidden md:block px-5 py-2 rounded-full font-bold text-sm transition-transform hover:scale-105 ${
-              isDarkTheme ? "bg-white text-black" : "bg-black text-white"
-            }`}
+            className={`hidden md:block px-5 py-2 rounded-full font-bold text-sm transition-transform hover:scale-105 ${isDarkTheme ? "bg-white text-black" : "bg-black text-white"
+              }`}
           >
             이용 문의하기
           </button>
 
           {/* 모바일 햄버거 토글 버튼 */}
-          <button 
+          <button
             className="md:hidden p-2 z-50"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -78,21 +80,20 @@ const Header = () => {
       {/* ✅ 모바일 드롭다운 메뉴 */}
       {isMobileMenuOpen && (
         <div className={`md:hidden absolute top-full left-0 w-full border-t ${isDarkTheme ? 'bg-black/95 border-white/10 text-white' : 'bg-white/95 border-black/5 text-black'} backdrop-blur-xl flex flex-col px-6 py-4 shadow-2xl`}>
-            <Link to="/" className="py-4 font-bold text-lg border-b border-gray-500/20">서비스 소개</Link>
-            <Link to="/manual" className="py-4 font-bold text-lg border-b border-gray-500/20">사용 설명서</Link>
-            <Link to="/trial" className="py-4 font-bold text-lg border-b border-gray-500/20">체험하기</Link>
-            <Link to="/status" className="py-4 font-bold text-lg border-b border-gray-500/20">실시간 현황</Link>
-            <Link to="/makers" className="py-4 font-bold text-lg border-b border-gray-500/20">팀 소개</Link>
-            
-            {/* 모바일용 문의 버튼 */}
-            <button
-                onClick={() => window.open('http://pf.kakao.com/_xeKARX', '_blank')}
-                className={`mt-8 mb-4 w-full py-4 rounded-2xl font-bold text-center text-lg shadow-sm ${
-                  isDarkTheme ? "bg-white text-black" : "bg-black text-white"
-                }`}
-            >
-                카카오톡 이용 문의하기
-            </button>
+          <Link to="/" className="py-4 font-bold text-lg border-b border-gray-500/20">서비스 소개</Link>
+          <Link to="/manual" className="py-4 font-bold text-lg border-b border-gray-500/20">사용 설명서</Link>
+          <Link to="/trial" className="py-4 font-bold text-lg border-b border-gray-500/20">체험하기</Link>
+          <Link to="/status" className="py-4 font-bold text-lg border-b border-gray-500/20">실시간 현황</Link>
+          <Link to="/makers" className="py-4 font-bold text-lg border-b border-gray-500/20">팀 소개</Link>
+
+          {/* 모바일용 문의 버튼 */}
+          <button
+            onClick={() => window.open('http://pf.kakao.com/_xeKARX', '_blank')}
+            className={`mt-8 mb-4 w-full py-4 rounded-2xl font-bold text-center text-lg shadow-sm ${isDarkTheme ? "bg-white text-black" : "bg-black text-white"
+              }`}
+          >
+            카카오톡 이용 문의하기
+          </button>
         </div>
       )}
     </header>

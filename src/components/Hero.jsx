@@ -142,9 +142,9 @@ const Hero = () => {
                   alt="tablet mockup"
                   draggable={false}
                   className="
-                    absolute bottom-0
+                    absolute -bottom-10
                     left-1/2 -translate-x-1/2 w-[420px] 
-                    sm:w-[560px] md:w-[680px] lg:w-[800px]
+                    sm:w-[530px] md:w-[650px] lg:w-[800px]
                     
                   "
                 />
@@ -155,7 +155,7 @@ const Hero = () => {
                   alt="mobile mockup"
                   draggable={false}
                   className="
-            absolute bottom-0
+            absolute -bottom-10
             left-[0%] sm:left-[14%] md:left-[18%] lg:left-[0%]
             h-[220px] sm:h-[220px] md:h-[360px] lg:h-[420px]
             drop-shadow-2xl z-30
@@ -169,7 +169,7 @@ const Hero = () => {
                   alt="server mockup"
                   draggable={false}
                   className="
-            absolute bottom-0
+            absolute -bottom-10
             right-[6%] sm:right-[8%] md:right-[10%] lg:right-[-0%]
             h-[220px] sm:h-[260px] md:h-[360px] lg:h-[420px]
             w-auto
@@ -185,7 +185,7 @@ const Hero = () => {
                     src="/assets/mockup_tablet.png"
                     alt="tablet mockup"
                     draggable={false}
-                    className="w-[400px] md:w-[600px] lg:w-[800px] drop-shadow-2xl"
+                    className="w-[400px] md:w-[540px] lg:w-[760px] drop-shadow-2xl"
                   />
                 )}
                 {current.mockups.includes("mobile") && (
@@ -193,7 +193,7 @@ const Hero = () => {
                     src="/assets/mockup_customer.png"
                     alt="mobile mockup"
                     draggable={false}
-                    className="w-[150px] md:w-[200px] lg:w-[300px] lg:translate-y-[10px] drop-shadow-2xl"
+                    className="h-[240px] md:h-[320px] lg:h-[480px] lg:translate-y-[10px] drop-shadow-2xl"
                   />
                 )}
               </div>
