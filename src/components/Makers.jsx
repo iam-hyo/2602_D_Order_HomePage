@@ -57,10 +57,6 @@ const Makers = () => {
             </div>
           ))}
         </div>
-
-        <footer className="mt-32 pt-10 border-t border-gray-100 text-center text-gray-300 text-sm">
-          © 2026 D-Order Team. All rights reserved.
-        </footer>
       </div>
     </section>
   );
