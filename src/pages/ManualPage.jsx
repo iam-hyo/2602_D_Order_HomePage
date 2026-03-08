@@ -6,17 +6,17 @@ const Manual = () => {
   const cards = [
     {
       id: 1,
-      title: "고객 주문 기능 소개",
-      sub: "사용자 관점의 쉬운 UI",
+      title: "밀어서 결제 확인",
+      sub: "디오더의 안전한 결제 관리",
       size: "col-span-1",
       bgColor: "bg-[#F3F6FF]", // 연한 블루
       hoverBorder: "hover:border-blue-200",
-      imgClass: "w-[40%] right-6 -bottom-18",
+      imgClass: "w-[35%] right-6 bottom-0",
       hoverY: -10
     },
     {
       id: 2,
-      title: "실시간 주문 관리",
+      title: "서빙도 프로페서널하게",
       sub: "주방과 서빙의 완벽한 호흡",
       size: "col-span-1",
       bgColor: "bg-[#FDF4FF]", // 연한 퍼플
@@ -26,8 +26,8 @@ const Manual = () => {
     },
     {
       id: 3,
-      title: "전체 테이블 Page 소개",
-      sub: "회전율을 높이는 핵심 도구",
+      title: "놓치지 않는 4단계 주문관리",
+      sub: "주점의 모든 주문들을 한 눈에!",
       size: "col-span-2",
       bgColor: "bg-[#F0FDF4]", // 연한 그린 (성공/안정 느낌)
       hoverBorder: "hover:border-green-200",
@@ -36,8 +36,8 @@ const Manual = () => {
     },
     {
       id: 4,
-      title: "메뉴 관리 Page",
-      sub: "세트메뉴 구성부터 품절까지",
+      title: "테이블 초기화",
+      sub: "새로운 손님을 받기위해 장바구니를 초기화 해주세요",
       size: "col-span-1",
       bgColor: "bg-[#FFF7ED]", // 연한 오렌지
       hoverBorder: "hover:border-orange-200",
@@ -46,8 +46,8 @@ const Manual = () => {
     },
     {
       id: 5,
-      title: "서버 전용 Page",
-      sub: "입금 확인부터 서빙 콜까지",
+      title: "D-Order 운영가이드",
+      sub: "이렇게 사용해보세요",
       size: "col-span-1 row-span-2",
       bgColor: "bg-[#F8FAFC]", // 깔끔한 슬레이트/그레이
       hoverBorder: "hover:border-slate-300",
@@ -56,8 +56,8 @@ const Manual = () => {
     },
     {
       id: 6,
-      title: "쿠폰/이벤트 등록",
-      sub: "할인 코드 발급도 간편하게",
+      title: "테이블, 여기 다 모았다",
+      sub: "주문 취소부터 - 테이블 병합까지",
       size: "col-span-1",
       bgColor: "bg-[#FEF2F2]", // 연한 레드/핑크
       hoverBorder: "hover:border-red-200",
