@@ -11,7 +11,12 @@ import {
 const STEP_CONFIG = {
   id: 'step2',
   badge: 'STEP 2',
-  title: '직원 화면에서 서빙을 시작하면 ‘서빙중’ 상태로 자동 변경',
+  title: (
+    <>
+      서버(직원)이 서빙을 시작하면 <br />
+      ‘서빙중’ 버튼을 누르자 마자 '서빙중' 상태로 자동 변경
+    </>
+  ),
   description:
     '직원용 화면에서 서빙을 시작하면, 해당 주문은 자동으로 ‘서빙중’ 상태로 바뀌어 홀과 주방 모두 현재 상황을 한눈에 볼 수 있습니다.',
   leftMock: '/assets/manual/manual3_0301.png',
@@ -39,7 +44,7 @@ export default function Card3() {
             <motion.img
               src={leftMock}
               alt={`${badge} 화면`}
-              className="w-full h-auto rounded-3xl"
+              className="w-[clamp(140px,23vw,440px)] h-auto rounded-3xl"
               style={{ filter: imgDropShadow }}
               initial={{ y: 6 }}
               animate={{ y: [6, 0, 6] }}
@@ -47,7 +52,7 @@ export default function Card3() {
             />
             <ClickCursor
               src={cursor}
-              className="absolute -bottom-3 right-3 md:-bottom-4 md:right-6 w-10 md:w-12"
+              className="absolute -bottom-3 right-3 md:bottom-52 md:right-24 w-10 md:w-16"
             />
           </div>
           <ProgressDots className="my-6 md:my-0 md:flex-1" />

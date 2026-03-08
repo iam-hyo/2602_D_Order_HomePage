@@ -8,11 +8,11 @@ export default function Card1() {
     <Manual3SectionShell delay={0.05}>
       <div className="flex flex-col items-center gap-8 text-center w-full max-w-4xl mx-auto px-6 md:px-12 tracking-tight lg:tracking-normal">
         <h2 className="text-[36px] font-black text-black">
-          서빙 관리 시스템
+          놓치지 않는 4단계 주문관리
         </h2>
         <p className="text-[24px] text-gray-600 leading-relaxed">
-          주방의 조리 현황과 홀의 서빙 요청을 한 화면에서 확인하고, 어떤 테이블을 먼저
-          처리해야 할지 쉽게 파악할 수 있어요.
+          주방의 조리 현황과 홀의 서빙 요청을 한 화면에서 확인해요. <br />
+          어떤 테이블을 먼저 처리해야 할지 쉽게 파악할 수 있어요.
         </p>
         <motion.div
           className="w-full max-w-lg"

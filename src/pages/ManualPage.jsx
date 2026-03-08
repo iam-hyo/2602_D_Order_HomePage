@@ -27,7 +27,7 @@ const Manual = () => {
     {
       id: 3,
       title: "놓치지 않는 4단계 주문관리",
-      sub: "주점의 모든 주문들을 한 눈에!",
+      sub: "D-Order만의 편리한 주문확인 시스템을 사용해보세요",
       size: "col-span-2",
       bgColor: "bg-[#F0FDF4]", // 연한 그린 (성공/안정 느낌)
       hoverBorder: "hover:border-green-200",
