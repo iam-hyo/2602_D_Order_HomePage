@@ -1,10 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+
 
 const guideDropShadow = 'drop-shadow(0 20px 40px rgba(15,23,42,0.2))';
 
 /** 소개서 및 가이드 – 정렬: 제목 중앙 또는 좌측, 본문 좌측. 모든 Manual 하위 페이지 공통 */
 export default function CardGuide() {
+  const navigate = useNavigate();
   return (
     <section className="w-full max-w-6xl mx-auto px-6 md:px-12 tracking-tight lg:tracking-normal">
       <h2 className="text-[36px] font-black text-black mb-8 text-center md:text-left">
@@ -37,6 +40,7 @@ export default function CardGuide() {
               type="button"
               className="w-full flex items-center justify-between px-6 py-4 rounded-2xl bg-white border border-gray-100 transition-colors hover:bg-gray-50"
               style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.06))' }}
+              onClick={() => navigate('/trial')}
             >
               <span className="font-semibold text-gray-900 text-[24px]">
                 디오더 서비스 사용해보기
@@ -49,6 +53,7 @@ export default function CardGuide() {
               type="button"
               className="w-full flex items-center justify-between px-6 py-4 rounded-2xl bg-white border border-gray-100 transition-colors hover:bg-gray-50"
               style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.06))' }}
+              onClick={() => window.open('https://pf.kakao.com/_xeKARX', '_blank')}
             >
               <span className="font-semibold text-gray-900 text-[24px]">
                 지금 바로 카카오톡 문의하기

@@ -1,11 +1,15 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import ManualDetail1 from './manual/ManualDetail1';
 import ManualDetail3 from './manual/ManualDetail3';
 
 const ManualDetail: React.FC = () => {
   const { cardId } = useParams();
   const navigate = useNavigate();
 
+  if (cardId === 'manual_1') {
+    return <ManualDetail1 />;
+  }
   if (cardId === 'manual_3') {
     return <ManualDetail3 />;
   }
