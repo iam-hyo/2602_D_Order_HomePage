@@ -1,7 +1,9 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import ManualDetail1 from './manual/ManualDetail1';
+import ManualDetail2 from './manual/ManualDetail2';
 import ManualDetail3 from './manual/ManualDetail3';
+import ManualDetail6 from './manual/ManualDetail6';
 
 const ManualDetail: React.FC = () => {
   const { cardId } = useParams();
@@ -10,8 +12,14 @@ const ManualDetail: React.FC = () => {
   if (cardId === 'manual_1') {
     return <ManualDetail1 />;
   }
+  if (cardId === 'manual_2') {
+    return <ManualDetail2 />;
+  }
   if (cardId === 'manual_3') {
     return <ManualDetail3 />;
+  }
+  if (cardId === 'manual_6') {
+    return <ManualDetail6 />;
   }
 
   // 그 외 카드들은 아직 준비 전
