@@ -5,6 +5,16 @@ import Footer from '../components/Footer';
 const Manual = () => {
   const cards = [
     {
+      id: 3,
+      title: "놓치지 않는 4단계 주문관리",
+      sub: "D-Order만의 편리한 주문확인 시스템을 사용해보세요",
+      size: "col-span-2",
+      bgColor: "bg-[#F0FDF4]", // 연한 그린 (성공/안정 느낌)
+      hoverBorder: "hover:border-green-200",
+      imgClass: "w-[45%] right-10 -bottom-4",
+      hoverY: -8
+    },
+    {
       id: 1,
       title: "밀어서 결제 확인",
       sub: "디오더의 안전한 결제 관리",
@@ -24,44 +34,34 @@ const Manual = () => {
       imgClass: "w-[70%] right-4 -bottom-8", // 이미지가 작으면 여백을 더 줌
       hoverY: -15
     },
-    {
-      id: 3,
-      title: "놓치지 않는 4단계 주문관리",
-      sub: "D-Order만의 편리한 주문확인 시스템을 사용해보세요",
-      size: "col-span-2",
-      bgColor: "bg-[#F0FDF4]", // 연한 그린 (성공/안정 느낌)
-      hoverBorder: "hover:border-green-200",
-      imgClass: "w-[45%] right-10 -bottom-4",
-      hoverY: -8
-    },
-    {
-      id: 4,
-      title: "테이블 초기화",
-      sub: "새로운 손님을 받기위해 장바구니를 초기화 해주세요",
-      size: "col-span-1",
-      bgColor: "bg-[#FFF7ED]", // 연한 오렌지
-      hoverBorder: "hover:border-orange-200",
-      imgClass: "w-[70%] right-4 -bottom-8",
-      hoverY: -12
-    },
-    {
-      id: 5,
-      title: "D-Order 운영가이드",
-      sub: "이렇게 사용해보세요",
-      size: "col-span-1 row-span-2",
-      bgColor: "bg-[#F8FAFC]", // 깔끔한 슬레이트/그레이
-      hoverBorder: "hover:border-slate-300",
-      imgClass: "w-[50%] right-7 bottom-7",
-      hoverY: -5
-    },
+    // {
+    //   id: 4,
+    //   title: "테이블 초기화",
+    //   sub: "새로운 손님을 받기위해 장바구니를 초기화 해주세요",
+    //   size: "col-span-1",
+    //   bgColor: "bg-[#FFF7ED]", // 연한 오렌지
+    //   hoverBorder: "hover:border-orange-200",
+    //   imgClass: "w-[70%] right-4 -bottom-8",
+    //   hoverY: -12
+    // },
+    // {
+    //   id: 5,
+    //   title: "D-Order 운영가이드",
+    //   sub: "이렇게 사용해보세요",
+    //   size: "col-span-1 row-span-2",
+    //   bgColor: "bg-[#F8FAFC]", // 깔끔한 슬레이트/그레이
+    //   hoverBorder: "hover:border-slate-300",
+    //   imgClass: "w-[50%] right-7 bottom-7",
+    //   hoverY: -5
+    // },
     {
       id: 6,
       title: "테이블, 여기 다 모았다",
       sub: "주문 취소부터 - 테이블 병합까지",
-      size: "col-span-1",
+      size: "col-span-2",
       bgColor: "bg-[#FEF2F2]", // 연한 레드/핑크
       hoverBorder: "hover:border-red-200",
-      imgClass: "w-[70%] right-12 -bottom-8",
+      imgClass: "w-[45%] right-10 -bottom-4",
       hoverY: -20
     },
   ];
@@ -122,7 +122,7 @@ const Manual = () => {
           </div>
 
           <div className="mt-20 text-center">
-            <a href="/assets/manual/25년 가을 D-order 사용설명서.pdf" download className="bg-gray-100 px-8 py-4 rounded-2xl font-bold hover:bg-gray-200 transition">
+            <a href="/assets/manual/2601_디오더사용설명.pdf" download className="bg-gray-100 px-8 py-4 rounded-2xl font-bold hover:bg-gray-200 transition">
               📄 사용설명서 PDF 다운로드
             </a>
           </div>

@@ -2,6 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .details-shell {
+    @apply w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-12;
+  }
+
+  .details-shell-narrow {
+    @apply w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-12;
+  }
+
+  .details-section-gap {
+    @apply gap-6 sm:gap-8 md:gap-12;
+  }
+
+  .details-title {
+    @apply text-[28px] sm:text-[32px] md:text-[36px] font-black text-black leading-tight;
+  }
+
+  .details-title-sm {
+    @apply text-[24px] sm:text-[28px] md:text-[36px] font-black text-black leading-tight;
+  }
+
+  .details-body {
+    @apply text-base sm:text-[20px] md:text-[24px] text-gray-600 leading-relaxed;
+  }
+
+  .details-body-sm {
+    @apply text-[15px] sm:text-[17px] md:text-[20px] text-gray-600 leading-relaxed;
+  }
+
+  .details-note-title {
+    @apply text-[15px] sm:text-base md:text-[18px] font-semibold text-gray-700;
+  }
+
+  .details-guide-button-text {
+    @apply font-semibold text-gray-900 text-base sm:text-lg md:text-[24px];
+  }
+
+  .details-close-button {
+    @apply text-base sm:text-lg md:text-[24px] text-gray-400 underline underline-offset-4 transition hover:text-gray-600;
+  }
+}
+
 :root { font-family: 'Pretendard', sans-serif; }
 body { margin: 0; -webkit-font-smoothing: antialiased; }
 .snap-y { scroll-snap-type: y mandatory; }
@@ -43,4 +85,43 @@ body { margin: 0; -webkit-font-smoothing: antialiased; }
   will-change: transform;
   backface-visibility: hidden;
   transform-style: preserve-3d;
+}
+
+@media (max-width: 767px) {
+  .details-manual h2 {
+    font-size: 1.75rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .details-manual p {
+    font-size: 1rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .details-manual button {
+    font-size: 1rem !important;
+  }
+
+  .details-manual [class*='max-w-6xl'],
+  .details-manual [class*='max-w-5xl'],
+  .details-manual [class*='max-w-4xl'] {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .details-manual [class*='gap-8'] {
+    gap: 1.5rem;
+  }
+
+  .details-manual [class*='pt-12'],
+  .details-manual [class*='pt-14'],
+  .details-manual [class*='pt-16'] {
+    padding-top: 1.5rem;
+  }
+
+  .details-manual [class*='py-12'],
+  .details-manual [class*='py-16'] {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }

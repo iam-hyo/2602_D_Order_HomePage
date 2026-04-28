@@ -11,7 +11,7 @@ export default function Card1() {
             <PulseImage
               src="/assets/manual/manual5_01_left.png"
               alt="더보기 단계"
-              className="w-full max-w-[420px] h-auto rounded-[1.25rem]"
+              className="w-full max-w-[280px] sm:max-w-[340px] md:max-w-[420px] h-auto rounded-[1.25rem]"
             />
           </div>
           <div className="flex flex-col items-center">
@@ -19,7 +19,7 @@ export default function Card1() {
             <PulseImage
               src="/assets/manual/manual5_01_right.png"
               alt="개별 주문 취소 단계"
-              className="w-full max-w-[420px] h-auto rounded-[1.25rem]"
+              className="w-full max-w-[280px] sm:max-w-[340px] md:max-w-[420px] h-auto rounded-[1.25rem]"
             />
           </div>
         </div>

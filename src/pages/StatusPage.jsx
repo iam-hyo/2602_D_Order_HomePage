@@ -111,7 +111,7 @@ const StatusPage = () => {
   useEffect(() => {
     // ✅ 목표 날짜(미래)로 설정해야 카운트다운이 동작함
     // 예시: 2026-05-15 00:00:00 KST
-    const targetDate = new Date("2026-05-15T00:00:00+09:00").getTime();
+    const targetDate = new Date("2026-05-26T00:00:00+09:00").getTime();
 
     const tick = () => {
       const now = Date.now();

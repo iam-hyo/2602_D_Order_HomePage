@@ -17,10 +17,6 @@ export default function Card3() {
             alt="테이블 병합 메인 목업"
             className="w-full h-auto rounded-[1.25rem]"
           />
-          <ClickCursor
-            src="/assets/manual/manual_cursor.png"
-            className="absolute left-4 bottom-4 w-14 md:w-16"
-          />
         </div>
         <div className="flex flex-col items-center gap-5">
           <ProgressDots dots={8} />

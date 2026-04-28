@@ -24,16 +24,16 @@ const ManualDetail: React.FC = () => {
 
   // 그 외 카드들은 아직 준비 전
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
+    <div className="details-manual min-h-screen flex items-center justify-center bg-white px-4">
       <div className="text-center">
-        <p className="text-gray-500 mb-4">준비 중인 매뉴얼입니다.</p>
+        <p className="text-gray-500 mb-4 text-sm sm:text-base">준비 중인 매뉴얼입니다.</p>
         <button
           type="button"
           onClick={() => {
             window.close();
             navigate(-1);
           }}
-          className="text-sm text-gray-400 underline underline-offset-4 hover:text-gray-600 transition"
+          className="details-close-button"
         >
           뒤로가기
         </button>
