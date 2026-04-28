@@ -1,5 +1,5 @@
 import React from 'react';
-import { PulseImage, Manual3SectionShell, imgDropShadow } from './shared';
+import { ProgressDots, PulseImage, Manual3SectionShell, imgDropShadow } from './shared';
 
 export default function Card2() {
   return (
@@ -21,7 +21,8 @@ export default function Card2() {
           />
         </div>
         <div className="flex flex-col items-center gap-4">
-          <div className="h-40 w-px border-l-2 border-dashed border-gray-300" />
+          {/* <div className="h-40 w-px border-l-2 border-dashed border-gray-300" /> */}
+          <ProgressDots dots={8} />
           <img
             src="/assets/manual/manual5_0202.png"
             alt="시간 강조 카드"

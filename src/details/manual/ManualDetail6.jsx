@@ -3,10 +3,10 @@ import Card0 from './Detail6/card0';
 import Card1 from './Detail6/card1';
 import Card2 from './Detail6/card2';
 import Card3 from './Detail6/card3';
-import Card4 from './Detail6/card4';
+// import Card4 from './Detail6/card4';
 import CardGuide from './Detail3/cardGuide';
 
-const SECTION_IDS = ['card0', 'card1', 'card2', 'card3', 'card4', 'guide'];
+const SECTION_IDS = ['card0', 'card1', 'card2', 'card3', 'guide'];
 
 export default function ManualDetail6() {
   const containerRef = useRef(null);
@@ -27,28 +27,28 @@ export default function ManualDetail6() {
   };
 
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-white font-pretendard">
+    <div className="details-manual relative h-screen w-full overflow-hidden bg-white font-pretendard">
       <div
         ref={containerRef}
         onScroll={handleScroll}
         className="h-full w-full overflow-y-auto snap-y snap-mandatory scroll-smooth"
         style={{ overscrollBehavior: 'contain' }}
       >
-        <div className="snap-start h-screen flex flex-col justify-center py-16">
+        <div className="snap-start h-screen flex flex-col justify-center py-8 md:py-16">
           <Card0 />
         </div>
-        {[Card1, Card2, Card3, Card4].map((C, i) => (
-          <div key={SECTION_IDS[i + 1]} className="snap-start min-h-screen flex flex-col justify-center py-16">
+        {[Card1, Card2, Card3].map((C, i) => (
+          <div key={SECTION_IDS[i + 1]} className="snap-start min-h-screen flex flex-col justify-center py-8 md:py-16">
             <C />
           </div>
         ))}
-        <div className="snap-start min-h-screen flex flex-col justify-center overflow-auto py-16">
+        <div className="snap-start min-h-screen flex flex-col justify-center overflow-auto py-8 md:py-16">
           <CardGuide />
           <div className="mt-12 flex justify-center">
             <button
               type="button"
               onClick={() => window.close()}
-              className="text-[24px] text-gray-400 underline underline-offset-4 transition hover:text-gray-600"
+              className="details-close-button"
             >
               창 닫기
             </button>

@@ -27,31 +27,31 @@ export default function ManualDetail1() {
   };
 
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-white font-pretendard">
+    <div className="details-manual relative h-screen w-full overflow-hidden bg-white font-pretendard">
       <div
         ref={containerRef}
         onScroll={handleScroll}
         className="h-full w-full overflow-y-auto snap-y snap-mandatory scroll-smooth"
         style={{ overscrollBehavior: 'contain' }}
       >
-        <div className="snap-start h-screen flex flex-col justify-center">
+        <div className="snap-start h-screen flex flex-col justify-center px-0 py-6 md:px-0 md:py-0">
           <Card1 />
         </div>
         {[Card2, Card3, Card4].map((C, i) => (
           <div
             key={SECTION_IDS[i]}
-            className="snap-start min-h-screen flex flex-col justify-center py-12"
+            className="snap-start min-h-screen flex flex-col justify-center py-8 md:py-12"
           >
             <C />
           </div>
         ))}
-        <div className="snap-start min-h-screen flex flex-col justify-center overflow-auto py-12">
+        <div className="snap-start min-h-screen flex flex-col justify-center overflow-auto py-8 md:py-12">
           <CardGuide />
           <div className="mt-12 flex justify-center">
             <button
               type="button"
               onClick={() => window.close()}
-              className="text-[24px] text-gray-400 underline underline-offset-4 transition hover:text-gray-600"
+              className="details-close-button"
             >
               창 닫기
             </button>
