@@ -1,7 +1,15 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import { BookOpen, MousePointer2, CreditCard, ChevronRight, X, FileText, MessageCircle } from "lucide-react";
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import {
+  BookOpen,
+  MousePointer2,
+  CreditCard,
+  ChevronRight,
+  X,
+  FileText,
+  MessageCircle,
+} from 'lucide-react';
 
 const HowtoStart = () => {
   const navigate = useNavigate();
@@ -10,37 +18,37 @@ const HowtoStart = () => {
   const cards = [
     {
       id: 1,
-      title: "D-Order의 자세한 기능 알아보기",
-      icon: <BookOpen size={32} className="text-orange-500" />,
-      action: () => navigate("/manual"),
-      bgColor: "bg-orange-50",
-      hoverBorder: "hover:border-orange-200"
+      title: 'D-Order의 자세한 기능 알아보기',
+      icon: <BookOpen size={32} className='text-orange-500' />,
+      action: () => navigate('/manual'),
+      bgColor: 'bg-orange-50',
+      hoverBorder: 'hover:border-orange-200',
     },
-    {
-      id: 2,
-      title: "디오더 서비스 사용해보기",
-      icon: <MousePointer2 size={32} className="text-blue-500" />,
-      action: () => navigate("/trial"),
-      bgColor: "bg-blue-50",
-      hoverBorder: "hover:border-blue-200"
-    },
+    // {
+    //   id: 2,
+    //   title: "디오더 서비스 사용해보기",
+    //   icon: <MousePointer2 size={32} className="text-blue-500" />,
+    //   action: () => navigate("/trial"),
+    //   bgColor: "bg-blue-50",
+    //   hoverBorder: "hover:border-blue-200"
+    // },
     {
       id: 3,
-      title: "사용 방법 및 요금 안내",
-      icon: <CreditCard size={32} className="text-green-500" />,
+      title: '사용 방법 및 요금 안내',
+      icon: <CreditCard size={32} className='text-green-500' />,
       action: () => setIsModalOpen(true),
-      bgColor: "bg-green-50",
-      hoverBorder: "hover:border-green-200"
-    }
+      bgColor: 'bg-green-50',
+      hoverBorder: 'hover:border-green-200',
+    },
   ];
 
   return (
-    <section className="min-h-screen bg-black py-10 px-6 flex flex-col items-center justify-center font-pretendard">
-      <h2 className="text-3xl md:text-4xl font-black text-white mb-12 text-center pt-[128px]">
+    <section className='min-h-screen bg-black py-10 px-6 flex flex-col items-center justify-center font-pretendard'>
+      <h2 className='text-3xl md:text-4xl font-black text-white mb-12 text-center pt-[128px]'>
         어디서 부터 시작해야 할지 <br />
         모르겠다면?
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl">
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl'>
         {cards.map((card) => (
           <motion.div
             key={card.id}
@@ -48,15 +56,15 @@ const HowtoStart = () => {
             onClick={card.action}
             className={`${card.bgColor} p-8 rounded-[2rem] cursor-pointer border border-transparent ${card.hoverBorder} transition-all duration-300 relative group overflow-hidden`}
           >
-            <div className="flex flex-col h-full justify-between relative z-10">
-              <div className="bg-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform">
+            <div className='flex flex-col h-full justify-between relative z-10'>
+              <div className='bg-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform'>
                 {card.icon}
               </div>
               <div>
-                <h3 className="text-xl font-bold leading-tight group-hover:opacity-80 transition-opacity">
+                <h3 className='text-xl font-bold leading-tight group-hover:opacity-80 transition-opacity'>
                   {card.title}
                 </h3>
-                <div className="mt-4 flex items-center text-sm font-bold opacity-50 group-hover:opacity-100 transition-opacity group-hover:gap-2">
+                <div className='mt-4 flex items-center text-sm font-bold opacity-50 group-hover:opacity-100 transition-opacity group-hover:gap-2'>
                   바로가기 <ChevronRight size={16} />
                 </div>
               </div>
@@ -68,13 +76,13 @@ const HowtoStart = () => {
       {/* Price Modal */}
       <AnimatePresence>
         {isModalOpen && (
-          <div className="fixed inset-0 z-[200] flex items-center justify-center px-4">
+          <div className='fixed inset-0 z-[200] flex items-center justify-center px-4'>
             {/* 배경 어둡게 (클릭 시 닫힘) */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+              className='absolute inset-0 bg-black/60 backdrop-blur-sm'
               onClick={() => setIsModalOpen(false)}
             />
 
@@ -83,37 +91,52 @@ const HowtoStart = () => {
               initial={{ scale: 0.9, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
-              className="bg-white w-full max-w-md rounded-[2.5rem] p-8 md:p-10 relative z-10 shadow-2xl text-center"
+              className='bg-white w-full max-w-md rounded-[2.5rem] p-8 md:p-10 relative z-10 shadow-2xl text-center'
             >
               {/* 닫기(X) 버튼 */}
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="absolute top-6 right-6 p-2 text-gray-400 hover:text-black hover:bg-gray-100 rounded-full transition-colors"
+                className='absolute top-6 right-6 p-2 text-gray-400 hover:text-black hover:bg-gray-100 rounded-full transition-colors'
               >
                 <X size={24} />
               </button>
 
-              <h3 className="text-2xl font-black mb-2">디오더 구간별 요금제</h3>
-              <p className="text-gray-400 text-sm mb-8">서버 유지비용 목적으로 사용됩니다.</p>
+              <h3 className='text-2xl font-black mb-2'>디오더 구간별 요금제</h3>
+              <p className='text-gray-400 text-sm mb-8'>
+                서버 유지비용 목적으로 사용됩니다.
+              </p>
 
               {/* 요금제 리스트 (isPopular 제거) */}
-              <div className="space-y-4 text-left">
-                <PriceRow title="Lite" count="30개 이하" price="6,000원" color="bg-gray-100" />
-                <PriceRow title="Standard" count="60개 이하" price="11,000원" color="bg-blue-50 text-blue-600" />
+              <div className='space-y-4 text-left'>
                 <PriceRow
-                  title="Pro"
-                  count="제안 없이 모든 테이블"
-                  price="15,000원"
-                  color="bg-orange-50 text-orange-600"
+                  title='Lite'
+                  count='30개 이하'
+                  price='6,000원'
+                  color='bg-gray-100'
+                />
+                <PriceRow
+                  title='Standard'
+                  count='60개 이하'
+                  price='11,000원'
+                  color='bg-blue-50 text-blue-600'
+                />
+                <PriceRow
+                  title='Pro'
+                  count='제안 없이 모든 테이블'
+                  price='15,000원'
+                  color='bg-orange-50 text-orange-600'
                 />
               </div>
 
               {/* 안내 문구 추가 */}
-              <div className="mt-8 p-4 bg-gray-50 rounded-2xl border border-gray-100">
-                <p className="text-sm text-gray-600 font-medium leading-relaxed">
+              <div className='mt-8 p-4 bg-gray-50 rounded-2xl border border-gray-100'>
+                <p className='text-sm text-gray-600 font-medium leading-relaxed'>
                   서비스 이용 신청 및 추가 문의는
                   <br />
-                  <span className="text-black font-bold">카카오톡 채널 내 구글 설문</span>을 통해
+                  <span className='text-black font-bold'>
+                    카카오톡 채널 내 구글 설문
+                  </span>
+                  을 통해
                   <br />
                   진행하실 수 있습니다.
                 </p>
@@ -122,21 +145,23 @@ const HowtoStart = () => {
               <button
                 onClick={() =>
                   window.open(
-                    "https://docs.google.com/forms/d/e/1FAIpQLSdly7gZzRmLqnqaRPndxT1WqHIDvVTYMLoFZpM0v2cA4Y2_vA/viewform",
-                    "_blank"
+                    'https://docs.google.com/forms/d/e/1FAIpQLSdly7gZzRmLqnqaRPndxT1WqHIDvVTYMLoFZpM0v2cA4Y2_vA/viewform',
+                    '_blank',
                   )
                 }
-                className="mt-4 w-full bg-[#1A73E8] text-white py-4 rounded-2xl font-semibold hover:bg-[#174EA6] hover:scale-[1.02] transition-all flex items-center justify-center gap-2 shadow-sm"
+                className='mt-4 w-full bg-[#1A73E8] text-white py-4 rounded-2xl font-semibold hover:bg-[#174EA6] hover:scale-[1.02] transition-all flex items-center justify-center gap-2 shadow-sm'
               >
                 <FileText size={20} />
                 구글폼으로 바로 이용 신청하기
               </button>
 
               <button
-                onClick={() => window.open("http://pf.kakao.com/_xeKARX", "_blank")}
-                className="mt-4 w-full bg-[#FAE100] text-black py-4 rounded-2xl font-semibold hover:brightness-95 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 shadow-sm"
+                onClick={() =>
+                  window.open('http://pf.kakao.com/_xeKARX', '_blank')
+                }
+                className='mt-4 w-full bg-[#FAE100] text-black py-4 rounded-2xl font-semibold hover:brightness-95 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 shadow-sm'
               >
-                <MessageCircle size={20} className="fill-black" />
+                <MessageCircle size={20} className='fill-black' />
                 카카오톡으로 F&Q 확인하기
               </button>
             </motion.div>
@@ -148,14 +173,16 @@ const HowtoStart = () => {
 };
 
 const PriceRow = ({ title, count, price, color, isPopular }) => (
-  <div className={`flex items-center justify-between p-5 rounded-2xl ${color} relative`}>
+  <div
+    className={`flex items-center justify-between p-5 rounded-2xl ${color} relative`}
+  >
     <div>
-      <span className="font-bold text-lg block">{title}</span>
-      <span className="text-xs opacity-60">테이블 {count}</span>
+      <span className='font-bold text-lg block'>{title}</span>
+      <span className='text-xs opacity-60'>테이블 {count}</span>
     </div>
-    <span className="font-bold text-xl">{price}</span>
+    <span className='font-bold text-xl'>{price}</span>
     {isPopular && (
-      <span className="absolute -top-3 right-4 bg-blue-600 text-white text-[10px] px-2 py-1 rounded-full font-bold shadow-sm">
+      <span className='absolute -top-3 right-4 bg-blue-600 text-white text-[10px] px-2 py-1 rounded-full font-bold shadow-sm'>
         POPULAR
       </span>
     )}
