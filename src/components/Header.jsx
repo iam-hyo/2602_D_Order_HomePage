@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react'; // ✅ 아이콘 추가
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react"; // ✅ 아이콘 추가
 
 const Header = () => {
   const { pathname } = useLocation();
@@ -8,13 +8,13 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // 테마 결정 로직
-  const isDarkTheme = pathname === '/' || pathname === '/status';
+  const isDarkTheme = pathname === "/" || pathname === "/status";
 
   // 스크롤 감지
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // ✅ 페이지 이동 시 모바일 메뉴 자동 닫힘
@@ -76,17 +76,43 @@ const Header = () => {
               isDarkTheme ? 'bg-white text-black' : 'bg-black text-white'
             }`}
           >
-            이용 문의하기
+            이용 신청하기
           </button>
 
-          {/* 모바일 햄버거 토글 버튼 */}
+          {/* 데스크톱용 보조 버튼 */}
           <button
             className='md:hidden p-2 z-50'
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            카카오톡 문의
+          </button>
+
+          {/* 모바일 햄버거 버튼 */}
+          <button className="md:hidden p-2 z-50" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
+
+        {/* 모바일 메뉴 */}
+        {isMobileMenuOpen && (
+          <div
+            className={`md:hidden absolute top-full left-0 w-full px-5 py-4 border-t ${
+              isDarkTheme ? "bg-black border-white/10" : "bg-white border-black/5"
+            }`}
+          >
+            <button
+              onClick={() => {
+                window.open("http://pf.kakao.com/_xeKARX", "_blank");
+                setIsMobileMenuOpen(false);
+              }}
+              className={`w-full py-3 rounded-2xl font-medium ${
+                isDarkTheme ? "bg-white/8 text-white" : "bg-black/5 text-black/70"
+              }`}
+            >
+              카카오톡 문의하기
+            </button>
+          </div>
+        )}
       </div>
 
       {/* ✅ 모바일 드롭다운 메뉴 */}

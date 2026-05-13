@@ -63,12 +63,13 @@ export default function CardGuide() {
               </span>
             </button>
           </div>
-          <button
-            type="button"
-            className="mt-6 md:mt-8 w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3.5 md:py-4 rounded-2xl text-base sm:text-lg md:text-[24px] transition-colors"
+          <a
+            href="/assets/manual/2601_디오더사용설명.pdf"
+            download="2601_디오더사용설명.pdf"
+            className="mt-6 md:mt-8 flex w-full items-center justify-center bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3.5 md:py-4 rounded-2xl text-base sm:text-lg md:text-[24px] transition-colors"
           >
             사용설명서 PDF 다운로드
-          </button>
+          </a>
         </div>
       </div>
     </section>
