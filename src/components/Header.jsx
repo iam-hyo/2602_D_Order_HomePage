@@ -106,12 +106,12 @@ const Header = () => {
           >
             사용 설명서
           </Link>
-          <Link
+          {/* <Link
             to='/trial'
             className='py-4 font-bold text-lg border-b border-gray-500/20'
           >
             체험하기
-          </Link>
+          </Link> */}
           <Link
             to='/status'
             className='py-4 font-bold text-lg border-b border-gray-500/20'
