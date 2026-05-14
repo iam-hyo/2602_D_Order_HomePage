@@ -27,12 +27,12 @@ const Footer = () => {
             >
               이용 가이드
             </Link>
-            <Link
+            {/* <Link
               to='/trial'
               className='text-gray-500 hover:text-black transition-colors'
             >
               체험하기
-            </Link>
+            </Link> */}
             <Link
               to='/makers'
               className='text-gray-500 hover:text-black transition-colors'
