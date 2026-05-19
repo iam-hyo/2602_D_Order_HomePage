@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Makers = () => {
   const teams = [
     {
-      role: "기획 / 개발",
+      role: "기획 / 대협",
       members: ["김강민", "박진희", "손영채", "장선우", "전효준"],
       color: "text-orange-500"
     },

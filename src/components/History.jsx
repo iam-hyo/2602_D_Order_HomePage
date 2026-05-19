@@ -30,10 +30,10 @@ const History = () => {
       },
       {
         id: "2605",
-        date: "2026.05.XX",
-        title: "26년 봄 대동제 (예정)",
-        subtitle: "동국대학교 축제에서 만나요!",
-        url: "https://www.instagram.com/d_order.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        date: "2026.05.26",
+        title: "26년 봄 대동제",
+        subtitle: "17개+ 단체, 동국대학교 축제에서 만나요!",
+        url: "https://www.instagram.com/p/DYL9qgEkUBV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
       },
     ],
     []
