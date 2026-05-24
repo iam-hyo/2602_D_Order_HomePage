@@ -10,6 +10,8 @@ const Header = () => {
   // 테마 결정 로직
   const isDarkTheme = pathname === "/" || pathname === "/status";
 
+  const isAfterMay26 = new Date() >= new Date("2026-05-26T00:00:00+09:00");
+
   // 스크롤 감지
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -57,9 +59,20 @@ const Header = () => {
               사용 설명서
             </Link>
             {/* <Link to="/trial" className="hover:opacity-100 transition-opacity">체험하기</Link> */}
-            <Link to='/status' className='hover:opacity-100 transition-opacity'>
-              실시간 현황
-            </Link>
+            {isAfterMay26 ? (
+              <a
+                href="https://customer.dorder-api.shop/ad"
+                target="_blank"
+                rel="noopener noreferrer"
+                className='hover:opacity-100 transition-opacity'
+              >
+                실시간 현황
+              </a>
+            ) : (
+              <Link to='/status' className='hover:opacity-100 transition-opacity'>
+                실시간 현황
+              </Link>
+            )}
             <Link to='/makers' className='hover:opacity-100 transition-opacity'>
               팀 소개
             </Link>{' '}
@@ -138,12 +151,24 @@ const Header = () => {
           >
             체험하기
           </Link> */}
-          <Link
-            to='/status'
-            className='py-4 font-bold text-lg border-b border-gray-500/20'
-          >
-            실시간 현황
-          </Link>
+          {isAfterMay26 ? (
+            <a
+              href="https://customer.dorder-api.shop/ad"
+              target="_blank"
+              rel="noopener noreferrer"
+              className='py-4 font-bold text-lg border-b border-gray-500/20 block'
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              실시간 현황
+            </a>
+          ) : (
+            <Link
+              to='/status'
+              className='py-4 font-bold text-lg border-b border-gray-500/20'
+            >
+              실시간 현황
+            </Link>
+          )}
           <Link
             to='/makers'
             className='py-4 font-bold text-lg border-b border-gray-500/20'
